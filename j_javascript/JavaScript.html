@@ -87,38 +87,38 @@
 
     <div class="flex flex-1 overflow-hidden">
 <!-- SIDEBAR COLAPSABLE AJUSTADO -->
-<aside id="sidebar" class="bg-[#0f172a] flex flex-col justify-start p-4 overflow-y-auto transition-all duration-300 mt-2">
+<aside id="sidebar" class="bg-[#0f172a] flex flex-col justify-start p-1 overflow-y-auto transition-all duration-300 mt-2 w-16">
   <!-- Botón para colapsar/expandir -->
-  <button id="toggleSidebar" class="mb-4 px-2 py-1 bg-gray-700 rounded text-white font-semibold self-center">
+  <button id="toggleSidebar" class="mb-4 px-2 py-1 bg-gray-700 rounded text-white font-semibold self-start ml-[10px]">
     ☰
   </button>
 
   <!-- Menú -->
   <nav class="flex flex-col gap-2">
     <a href="#dashboard" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-700">
-      🏠 <span class="menu-text">Panel de Control</span>
+      🏠 <span class="menu-text hidden">Panel de Control</span>
     </a>
     <a href="#team" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-700">
-      👥 <span class="menu-text">Equipo</span>
+      👥 <span class="menu-text hidden">Equipo</span>
     </a>
     <a href="#projects" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-700">
-      📁 <span class="menu-text">Proyectos</span>
+      📁 <span class="menu-text hidden">Proyectos</span>
     </a>
     <a href="#calendar" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-700">
-      📅 <span class="menu-text">Calendario</span>
+      📅 <span class="menu-text hidden">Calendario</span>
     </a>
     <a href="#documents" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-700">
-      📄 <span class="menu-text">Documentos</span>
+      📄 <span class="menu-text hidden">Documentos</span>
     </a>
     <a href="#reports" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-700">
-      📊 <span class="menu-text">Reportes</span>
+      📊 <span class="menu-text hidden">Reportes</span>
     </a>
   </nav>
 
   <!-- Perfil -->
-  <div class="flex items-center gap-3 border-t border-gray-700 pt-4 mt-auto">
+  <div class="flex items-center gap-3 border-t border-gray-700 pt-4 mt-auto px-3">
     <img src="../imagenes/usuario.jpg" class="rounded-full w-8 h-8" />
-    <span class="menu-text font-semibold">Josemaria</span>
+    <span class="menu-text hidden font-semibold">Josemaria</span>
   </div>
 </aside>
 
@@ -128,22 +128,23 @@
 
   toggleBtn.addEventListener('click', () => {
     sidebar.classList.toggle('w-16'); // ancho reducido al colapsar
-    sidebar.classList.toggle('p-1');  // padding reducido
+    sidebar.classList.toggle('p-1'); // padding reducido
     sidebar.querySelectorAll('.menu-text').forEach(el => el.classList.toggle('hidden'));
   });
 </script>
 
 <style>
   #sidebar {
-    width: 256px; /* Ancho inicial */
+    width: 64px; /* Sidebar cerrado por defecto */
     transition: width 0.3s, padding 0.3s;
     margin-top: 10px; /* Margen superior */
-    align-items: center; /* Iconos centrados */
   }
-  #sidebar.w-16 {
-    width: 64px; /* ancho reducido */
+
+  #sidebar:not(.w-16) {
+    width: 256px; /* Sidebar abierto */
+    padding: 16px; /* Restaurar padding */
   }
-  /* Para centrar verticalmente los íconos dentro del ancho reducido */
+
   #sidebar nav a {
     justify-content: flex-start; /* mantiene íconos alineados a la izquierda */
   }
