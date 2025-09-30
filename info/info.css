@@ -1,0 +1,18 @@
+/* Fondo con imagen */
+body {
+  background: url("../imagenes/fondo.png") no-repeat center center fixed; /* imagen de fondo */
+  background-size: cover; /* hace que la imagen se ajuste a toda la pantalla */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Transiciones suaves en tarjetas */
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efecto hover en enlaces del footer */
+footer a span:hover {
+  color: #6366f1; /* Indigo-500 */
+  text-decoration: underline;
+}

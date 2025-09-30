@@ -1,0 +1,45 @@
+/* Ocultar todas las secciones por defecto */
+main section { display: none; }
+
+/* Mostrar la que tiene el target */
+main section:target { display: block; }
+
+/* Si no hay target, mostrar dashboard por defecto */
+main section#dashboard:target,
+main section:first-child:not(:target) {
+  display: block;
+}
+
+/* Modal oculto por defecto */
+#customAlert { display: none; }
+#customAlert.active { display: flex; }
+
+/* Sidebar */
+#sidebar {
+  width: 64px; /* Sidebar cerrado por defecto */
+  transition: width 0.3s, padding 0.3s;
+  margin-top: 10px; /* Margen superior */
+}
+
+#sidebar:not(.w-16) {
+  width: 256px; /* Sidebar abierto */
+  padding: 16px; /* Restaurar padding */
+}
+
+#sidebar nav a {
+  justify-content: flex-start; /* mantiene íconos alineados a la izquierda */
+}
+
+/* Efecto hover en celdas del calendario */
+.day-cell {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.day-cell:hover {
+  background-color: #6366f1; /* Indigo-500 en Tailwind */
+  color: #ffffff;
+  transform: scale(1.1); /* efecto zoom */
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.7);
+}
+

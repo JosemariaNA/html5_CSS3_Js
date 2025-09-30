@@ -1,0 +1,27 @@
+/* ==== Portafolio - PixelForge Studios ==== */
+
+/* Quitar márgenes del body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Filosofía */
+#filosofia {
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Imágenes de miembros del equipo */
+ul li img {
+  transition: transform 0.3s ease;
+}
+
+ul li img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+}

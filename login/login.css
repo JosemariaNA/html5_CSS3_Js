@@ -1,0 +1,43 @@
+/* ==== Inputs generales ==== */
+.form-input {
+  display: block;
+  width: 100%;
+  border-radius: 0.375rem; /* rounded-md */
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.375rem 0.75rem; /* px-3 py-1.5 */
+  font-size: 1rem;
+  color: white;
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-input::placeholder {
+  color: #6b7280; /* gray-500 */
+}
+
+.form-input:focus {
+  outline: 2px solid #6366f1; /* indigo-500 */
+  outline-offset: -2px;
+}
+
+/* ==== Botón principal ==== */
+.btn-submit {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0.375rem;
+  background-color: #6366f1; /* indigo-500 */
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #4f46e5; /* indigo-400 */
+}
+
+.btn-submit:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}

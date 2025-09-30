@@ -3,87 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portafolio </title>
+    <title>Portafolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body class="h-full">
 
-      <header class="absolute inset-x-0 top-0 z-50">
-    <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
-      <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img src="../imagenes/icono.png" alt="" class="h-20 w-auto" />
-        </a>
-      </div>
-      <div class="flex lg:hidden">
-        <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
-          <span class="sr-only">Open main menu</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
-            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a href="../index.html" class="text-sm/6 font-semibold text-white"> Inicio </a>
-        <a href="../nosotros/nosotros.html" class="text-sm/6 font-semibold text-white"> Nosotros </a>
-        <a href="../proyectos/proyectos.html" class="text-sm/6 font-semibold text-white"> Proyectos </a>
-        <a href="../info/info.html" class="text-sm/6 font-semibold text-white"> Información </a>
-        <a href="../j_javascript/JavaScript.html" class="text-sm/6 font-semibold text-white"> JS </a>
-      </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="../login/login.html" class="text-sm/6 font-semibold text-white"> Inicia Sesión<span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </nav>
-    <el-dialog>
-      <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
-        <div tabindex="0" class="fixed inset-0 focus:outline-none">
-          <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
-            <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Your Company</span>
-                <img src="../imagenes/icono.png" alt="" class="h-20 w-auto" />
-              </a>
-              <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-200">
-                <span class="sr-only">Close menu</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
-                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-white/10">
-                <div class="space-y-2 py-6">
-                  <a href="../index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"> Inicio </a>
-                  <a href="../nosotros/nosotros.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"> Nosotros</a>
-                  <a href="../proyectos/proyectos.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"> Proyectos </a>
-                  <a href="../info/info.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"> Información </a>
-                  <a href="../j_javascript/JavaScript.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"> JS </a>
-                </div>
-                <div class="py-6">
-                  <a href="../login/login.html" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"> Inicia Sesión </a>
-                </div>
-              </div>
-            </div>
-          </el-dialog-panel>
-        </div>
-      </dialog>
-    </el-dialog>
-  </header>
-
+<header class="absolute inset-x-0 top-0 z-50">
+  <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
+    <div class="flex lg:flex-1">
+      <a href="#" class="-m-1.5 p-1.5">
+        <span class="sr-only">Your Company</span>
+        <img src="../imagenes/icono.png" alt="" class="h-20 w-auto" />
+      </a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
+        <span class="sr-only">Open main menu</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a href="../index.html" class="text-sm/6 font-semibold text-white">Inicio</a>
+      <a href="../nosotros/nosotros.html" class="text-sm/6 font-semibold text-white">Nosotros</a>
+      <a href="../proyectos/proyectos.html" class="text-sm/6 font-semibold text-white">Proyectos</a>
+      <a href="../info/info.html" class="text-sm/6 font-semibold text-white">Información</a>
+      <a href="../j_javascript/JavaScript.html" class="text-sm/6 font-semibold text-white">JS</a>
+    </div>
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <a href="../login/login.html" class="text-sm/6 font-semibold text-white">Inicia Sesión <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </nav>
+</header>
 
 <div class="flex min-h-full flex-col justify-center px-6 py-22 lg:px-8">
   <div class="sm:mx-auto sm:w-full sm:max-w-sm">
     <img src="../imagenes/icono.png" alt="Your Company" class="mx-auto h-40 w-auto" />
-    <h2 class="mt-0 text-center text-2xl/9 font-bold tracking-tight text-white"> Ingrese a su cuenta </h2>
+    <h2 class="mt-0 text-center text-2xl/9 font-bold tracking-tight text-white">Ingrese a su cuenta</h2>
   </div>
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
     <form action="../j_javascript/JavaScript.html" method="GET" class="space-y-6">
       <div>
-        <label for="email" class="block text-sm/6 font-medium text-gray-100">Direccion de Correo Electronico</label>
+        <label for="email" class="block text-sm/6 font-medium text-gray-100">Dirección de Correo Electrónico</label>
         <div class="mt-2">
-          <input id="email" type="email" name="email" required autocomplete="email" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+          <input id="email" type="email" name="email" required autocomplete="email" class="form-input" />
         </div>
       </div>
 
@@ -91,22 +57,22 @@
         <div class="flex items-center justify-between">
           <label for="password" class="block text-sm/6 font-medium text-gray-100">Contraseña</label>
           <div class="text-sm">
-            <a href="#" class="font-semibold text-indigo-400 hover:text-indigo-300">Olvido su contraseña?</a>
+            <a href="#" class="font-semibold text-indigo-400 hover:text-indigo-300">¿Olvidó su contraseña?</a>
           </div>
         </div>
         <div class="mt-2">
-          <input id="password" type="password" name="password" required autocomplete="current-password" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+          <input id="password" type="password" name="password" required autocomplete="current-password" class="form-input" />
         </div>
       </div>
 
       <div>
-        <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"> Inicia Sesión</button>
+        <button type="submit" class="btn-submit">Inicia Sesión</button>
       </div>
     </form>
 
     <p class="mt-10 text-center text-sm/6 text-gray-400">
-      No es miembro?
-      <a href="#" class="font-semibold text-indigo-400 hover:text-indigo-300"> Postule para ingresar a nuestro equipo</a>
+      ¿No es miembro?
+      <a href="#" class="font-semibold text-indigo-400 hover:text-indigo-300">Postule para ingresar a nuestro equipo</a>
     </p>
   </div>
 </div>
