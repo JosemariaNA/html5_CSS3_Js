@@ -1,129 +1,250 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Perfil - Pixel Forge Studios</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="perfil.css">
-  <script src="perfil.js" defer></script>
-</head>
-<body class="bg-gray-900 text-white">
-
-  <!-- HEADER -->
-  <header class="bg-gray-800 shadow z-10">
-    <nav aria-label="Global" class="flex items-center justify-between p-* lg:px-8">
-      <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img src="../imagenes/icono.png" alt="" class="h-20 w-auto" />
-        </a>
-      </div>
-      <div class="flex lg:hidden">
-        <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
-          <span class="sr-only">Open main menu</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
-            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a href="../index.html" class="text-sm/6 font-semibold text-white"> Inicio </a>
-        <a href="../nosotros/nosotros.html" class="text-sm/6 font-semibold text-white"> Nosotros </a>
-        <a href="../proyectos/proyectos.html" class="text-sm/6 font-semibold text-white"> Proyectos </a>
-        <a href="../info/info.html" class="text-sm/6 font-semibold text-white"> Información </a>
-        <a href="../j_javascript/JavaScript.html" class="text-sm/6 font-semibold text-white"> JS </a>
-      </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="../login/login.html" class="text-sm/6 font-semibold text-white"> Inicia Sesión <span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </nav>
-    <el-dialog>
-      <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
-        <div tabindex="0" class="fixed inset-0 focus:outline-none">
-          <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
-            <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Your Company</span>
-                <img src="./imagenes/icono.png" alt="" class="h-20 w-auto" />
-              </a>
-              <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-200">
-                <span class="sr-only">Close menu</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
-                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-white/10">
-                <div class="space-y-2 py-6">
-                  <a href="../index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"> Inicio </a>
-                  <a href="../nosotros/nosotros.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"> Nosotros </a>
-                  <a href="../proyectos/proyectos.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"> Proyectos </a>
-                  <a href="../info/info.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"> Información </a>
-                  <a href="../j_javascript/JavaScript.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"> JS </a>
-                </div>
-                <div class="py-6">
-                  <a href="../login/login.html" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"> Inicia Sesión </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil - Pixel Forge Studios</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="perfil.css" />
+    <script src="perfil.js" defer></script>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- HEADER -->
+    <header class="bg-gray-800 shadow z-10">
+      <nav
+        aria-label="Global"
+        class="flex items-center justify-between p-* lg:px-8"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img src="../imagenes/icono.png" alt="" class="h-20 w-auto" />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            command="show-modal"
+            commandfor="mobile-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              data-slot="icon"
+              aria-hidden="true"
+              class="size-6"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="../index.html" class="text-sm/6 font-semibold text-white">
+            Inicio
+          </a>
+          <a
+            href="../nosotros/nosotros.html"
+            class="text-sm/6 font-semibold text-white"
+          >
+            Nosotros
+          </a>
+          <a
+            href="../proyectos/proyectos.html"
+            class="text-sm/6 font-semibold text-white"
+          >
+            Proyectos
+          </a>
+          <a
+            href="../info/info.html"
+            class="text-sm/6 font-semibold text-white"
+          >
+            Información
+          </a>
+          <a
+            href="../j_javascript/JavaScript.html"
+            class="text-sm/6 font-semibold text-white"
+          >
+            JS
+          </a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a
+            href="../login/login.html"
+            class="text-sm/6 font-semibold text-white"
+          >
+            Inicia Sesión <span aria-hidden="true">&rarr;</span></a
+          >
+        </div>
+      </nav>
+      <el-dialog>
+        <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+          <div tabindex="0" class="fixed inset-0 focus:outline-none">
+            <el-dialog-panel
+              class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10"
+            >
+              <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Your Company</span>
+                  <img src="./imagenes/icono.png" alt="" class="h-20 w-auto" />
+                </a>
+                <button
+                  type="button"
+                  command="close"
+                  commandfor="mobile-menu"
+                  class="-m-2.5 rounded-md p-2.5 text-gray-200"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="size-6"
+                  >
+                    <path
+                      d="M6 18 18 6M6 6l12 12"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-white/10">
+                  <div class="space-y-2 py-6">
+                    <a
+                      href="../index.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      Inicio
+                    </a>
+                    <a
+                      href="../nosotros/nosotros.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      Nosotros
+                    </a>
+                    <a
+                      href="../proyectos/proyectos.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      Proyectos
+                    </a>
+                    <a
+                      href="../info/info.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      Información
+                    </a>
+                    <a
+                      href="../j_javascript/JavaScript.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      JS
+                    </a>
+                  </div>
+                  <div class="py-6">
+                    <a
+                      href="../login/login.html"
+                      class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      Inicia Sesión
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </el-dialog-panel>
-        </div>
-      </dialog>
-    </el-dialog>
-  </header>
+            </el-dialog-panel>
+          </div>
+        </dialog>
+      </el-dialog>
+    </header>
 
-
-  <!-- PERFIL -->
-  <main class="max-w-5xl mx-auto p-6 mt-8">
-    <!-- Banner -->
-    <div class="relative bg-gray-800 h-80 rounded-lg">
-      <img src="../imagenes/banner.png" alt="Banner" class="w-full h-full object-cover">
-      <div class="absolute left-6 bottom-0 transform translate-y-1/2">
-        <img src="../imagenes/foto.jpg" alt="Avatar" class="w-32 h-32 rounded-full border-4 border-gray-900">
-      </div>
-    </div>
-
-    <!-- Info básica -->
-    <section class="mt-20 px-6">
-      <h2 class="text-2xl font-bold">Josemaría Napan Aparcana</h2>
-      <p class="text-gray-400">🎮 CEO / Desarrollador | Pixel Forge Studios</p>
-      <p class="text-sm text-gray-500 mt-1">Cañete, Lima, Perú</p>
-
-    <div class="flex gap-4 mt-4 justify-left">
-      <button class="bg-indigo-500 hover:bg-indigo-400 text-white font-semibold px-6 py-2 rounded-md shadow">
-        Seguir
-      </button>
-      <button class="bg-gray-700 hover:bg-gray-600 text-white font-semibold px-6 py-2 rounded-md shadow">
-        Mensaje
-      </button>
-    </div>
-    </section>
-
-    <!-- Bio -->
-    <section class="mt-8 bg-gray-800 rounded-lg p-6 shadow">
-      <h3 class="text-xl font-semibold mb-2">Sobre mí</h3>
-      <p class="text-gray-300 leading-relaxed">
-        Soy un estudiante de ingenieria de sistemas. Mi intención es convertirme en un desarrollador de videojuegos. Actualmente, estoy aprendiendo a usar Unity y Blender para crear experiencias de juego inmersivas. Me apasiona la creación de mundos virtuales y la narrativa interactiva. En mi tiempo libre, disfruto jugando videojuegos, explorando nuevas tecnologías y colaborando en proyectos de código abierto.
-      </p>
-    </section>
-
-    <!-- Actividad -->
-    <section class="mt-8">
-      <h3 class="text-xl font-semibold mb-4">Actividad Reciente</h3>
-      <div class="space-y-4">
-        <div class="bg-gray-800 p-4 rounded-lg shadow">
-          <p><span class="font-bold text-blue-400">Josemaría</span> compartió avances del proyecto <span class="italic">Dragon Quest Reborn</span>.</p>
-          <span class="block text-sm text-gray-400 mt-1">Hace 2 horas</span>
-        </div>
-        <div class="bg-gray-800 p-4 rounded-lg shadow">
-          <p><span class="font-bold text-blue-400">Josemaría</span> comentó en <span class="italic">PixelRacers Online</span>: “Gran trabajo en los modelos 3D 🚗🔥”.</p>
-          <span class="block text-sm text-gray-400 mt-1">Hace 1 día</span>
+    <!-- PERFIL -->
+    <main class="max-w-5xl mx-auto p-6 mt-8">
+      <!-- Banner -->
+      <div class="relative bg-gray-800 h-80 rounded-lg">
+        <img
+          src="../imagenes/banner.png"
+          alt="Banner"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute left-6 bottom-0 transform translate-y-1/2">
+          <img
+            src="../imagenes/foto.jpg"
+            alt="Avatar"
+            class="w-32 h-32 rounded-full border-4 border-gray-900"
+          />
         </div>
       </div>
-    </section>
-  </main>
 
-</body>
+      <!-- Info básica -->
+      <section class="mt-20 px-6">
+        <h2 class="text-2xl font-bold">Josemaría Napan Aparcana</h2>
+        <p class="text-gray-400">
+          🎮 CEO / Desarrollador | Pixel Forge Studios
+        </p>
+        <p class="text-sm text-gray-500 mt-1">Cañete, Lima, Perú</p>
+
+        <div class="flex gap-4 mt-4 justify-left">
+          <button
+            class="bg-indigo-500 hover:bg-indigo-400 text-white font-semibold px-6 py-2 rounded-md shadow"
+          >
+            Seguir
+          </button>
+          <button
+            class="bg-gray-700 hover:bg-gray-600 text-white font-semibold px-6 py-2 rounded-md shadow"
+          >
+            Mensaje
+          </button>
+        </div>
+      </section>
+
+      <!-- Bio -->
+      <section class="mt-8 bg-gray-800 rounded-lg p-6 shadow">
+        <h3 class="text-xl font-semibold mb-2">Sobre mí</h3>
+        <p class="text-gray-300 leading-relaxed">
+          Soy un estudiante de ingenieria de sistemas. Mi intención es
+          convertirme en un desarrollador de videojuegos. Actualmente, estoy
+          aprendiendo a usar Unity y Blender para crear experiencias de juego
+          inmersivas. Me apasiona la creación de mundos virtuales y la narrativa
+          interactiva. En mi tiempo libre, disfruto jugando videojuegos,
+          explorando nuevas tecnologías y colaborando en proyectos de código
+          abierto.
+        </p>
+      </section>
+
+      <!-- Actividad -->
+      <section class="mt-8">
+        <h3 class="text-xl font-semibold mb-4">Actividad Reciente</h3>
+        <div class="space-y-4">
+          <div class="bg-gray-800 p-4 rounded-lg shadow">
+            <p>
+              <span class="font-bold text-blue-400">Josemaría</span> compartió
+              avances del proyecto
+              <span class="italic">Dragon Quest Reborn</span>.
+            </p>
+            <span class="block text-sm text-gray-400 mt-1">Hace 2 horas</span>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg shadow">
+            <p>
+              <span class="font-bold text-blue-400">Josemaría</span> comentó en
+              <span class="italic">PixelRacers Online</span>: “Gran trabajo en
+              los modelos 3D 🚗🔥”.
+            </p>
+            <span class="block text-sm text-gray-400 mt-1">Hace 1 día</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
