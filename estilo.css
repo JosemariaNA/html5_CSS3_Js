@@ -1,0 +1,89 @@
+/* Enlaces de navegación */
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #818cf8; /* Indigo-400 */
+}
+
+/* Menú móvil */
+.menu-link {
+    display: block;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    color: white;
+    transition: background 0.3s;
+}
+
+.menu-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Botón cerrar menú */
+.close-btn {
+    background: transparent;
+    border: none;
+    color: #e5e7eb;
+    cursor: pointer;
+}
+
+/* Tarjetas de proyectos */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1f2937; /* gray-800 */
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    }
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 0.5rem;
+}
+
+.card-title {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-text {
+    margin-top: 0.5rem;
+    color: #9ca3af; /* gray-400 */
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.card-link {
+    margin-top: 1rem;
+    color: #818cf8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/* Pie de página */
+footer{
+    padding: 1.5rem 1rem;      /* <-- agrega espacio arriba/abajo y a los lados */
+    text-align: center;
+    color: #fff;
+    font-size: 0.875rem;
+}
