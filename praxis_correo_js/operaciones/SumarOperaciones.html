@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba de Operaciones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 text-white min-h-screen flex flex-col">
+    <!-- HEADER -->
+    <header class="bg-gray-800 shadow z-10 w-full fixed top-0 left-0">
+      <nav
+        aria-label="Global"
+        class="flex items-center justify-between p-6 lg:px-8"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img src="../imagenes/icono.jpg" alt="" class="h-20 w-auto" />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            command="show-modal"
+            commandfor="mobile-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              data-slot="icon"
+              aria-hidden="true"
+              class="size-6"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="../contacto/Cliente.html"
+            class="text-sm/6 font-semibold text-white"
+          >
+            Contacto
+          </a>
+          <a
+            href="../operaciones/SumarOperaciones.html"
+            class="text-sm/6 font-semibold text-white"
+          >
+            Operaciones
+          </a>
+        </div>
+      </nav>
+      <el-dialog>
+        <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+          <div tabindex="0" class="fixed inset-0 focus:outline-none">
+            <el-dialog-panel
+              class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10"
+            >
+              <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Your Company</span>
+                  <img src="./imagenes/icono.png" alt="" class="h-20 w-auto" />
+                </a>
+                <button
+                  type="button"
+                  command="close"
+                  commandfor="mobile-menu"
+                  class="-m-2.5 rounded-md p-2.5 text-gray-200"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="size-6"
+                  >
+                    <path
+                      d="M6 18 18 6M6 6l12 12"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-white/10">
+                  <div class="space-y-2 py-6">
+                    <a
+                      href="../contacto/Cliente.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      Contacto
+                    </a>
+                    <a
+                      href="../operaciones/SumarOperaciones.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      Operaciones
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </el-dialog-panel>
+          </div>
+        </dialog>
+      </el-dialog>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center mt-24">
+      <!-- Contenedor Principal -->
+      <div class="bg-gray-800 shadow-lg rounded-2xl p-8 w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-6">
+          Prueba de Operaciones
+        </h1>
+
+        <!-- Inputs -->
+        <div class="space-y-4">
+          <input
+            type="number"
+            id="num1"
+            placeholder="Número 1"
+            class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input
+            type="number"
+            id="num2"
+            placeholder="Número 2"
+            class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <!-- Botones -->
+        <div class="grid grid-cols-2 gap-4 mt-6">
+          <button
+            onclick="operar('suma')"
+            class="bg-blue-600 hover:bg-blue-700 p-3 rounded-lg font-semibold"
+          >
+            ➕ Sumar
+          </button>
+          <button
+            onclick="operar('resta')"
+            class="bg-red-600 hover:bg-red-700 p-3 rounded-lg font-semibold"
+          >
+            ➖ Restar
+          </button>
+          <button
+            onclick="operar('multi')"
+            class="bg-green-600 hover:bg-green-700 p-3 rounded-lg font-semibold"
+          >
+            ✖️ Multiplicar
+          </button>
+          <button
+            onclick="operar('div')"
+            class="bg-yellow-600 hover:bg-yellow-700 p-3 rounded-lg font-semibold"
+          >
+            ➗ Dividir
+          </button>
+        </div>
+
+        <!-- Resultado -->
+        <div
+          id="resultado"
+          class="mt-6 text-center text-xl font-bold text-blue-400"
+        >
+          Resultado: --
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function operar(tipo) {
+        const n1 = parseFloat(document.getElementById("num1").value) || 0;
+        const n2 = parseFloat(document.getElementById("num2").value) || 0;
+        let res;
+
+        switch (tipo) {
+          case "suma":
+            res = n1 + n2;
+            break;
+          case "resta":
+            res = n1 - n2;
+            break;
+          case "multi":
+            res = n1 * n2;
+            break;
+          case "div":
+            res = n2 !== 0 ? n1 / n2 : "Error (división por 0)";
+            break;
+        }
+
+        document.getElementById("resultado").innerText = "Resultado: " + res;
+      }
+    </script>
+  </body>
+</html>

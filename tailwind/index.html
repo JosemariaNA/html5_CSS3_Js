@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixelForge Studios</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="bg-gray-900 text-white bg-cover bg-center min-h-screen">
+    <!-- HEADER -->
+    <header class="bg-gray-800 shadow z-10">
+      <nav
+        aria-label="Global"
+        class="flex items-center justify-between p-6 lg:px-8"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img src="./imagenes/icono.png" alt="" class="h-20 w-auto" />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            command="show-modal"
+            commandfor="mobile-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              data-slot="icon"
+              aria-hidden="true"
+              class="size-6"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="./index.html" class="text-sm/6 font-semibold text-white">
+            Inicio
+          </a>
+          <a
+            href="./nosotros/nosotros.html"
+            class="text-sm/6 font-semibold text-white"
+          >
+            Nosotros
+          </a>
+          <a
+            href="./proyectos/proyectos.html"
+            class="text-sm/6 font-semibold text-white"
+          >
+            Proyectos
+          </a>
+          <a href="./info/info.html" class="text-sm/6 font-semibold text-white">
+            Información
+          </a>
+          <a
+            href="./j_javascript/JavaScript.html"
+            class="text-sm/6 font-semibold text-white"
+          >
+            JS
+          </a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a
+            href="./login/login.html"
+            class="text-sm/6 font-semibold text-white"
+          >
+            Inicia Sesión <span aria-hidden="true">&rarr;</span></a
+          >
+        </div>
+      </nav>
+      <el-dialog>
+        <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+          <div tabindex="0" class="fixed inset-0 focus:outline-none">
+            <el-dialog-panel
+              class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10"
+            >
+              <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Your Company</span>
+                  <img src="./imagenes/icono.png" alt="" class="h-20 w-auto" />
+                </a>
+                <button
+                  type="button"
+                  command="close"
+                  commandfor="mobile-menu"
+                  class="-m-2.5 rounded-md p-2.5 text-gray-200"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="size-6"
+                  >
+                    <path
+                      d="M6 18 18 6M6 6l12 12"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-white/10">
+                  <div class="space-y-2 py-6">
+                    <a
+                      href="./index.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      Inicio
+                    </a>
+                    <a
+                      href="./nosotros/nosotros.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      Nosotros
+                    </a>
+                    <a
+                      href="./proyectos/proyectos.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      Proyectos
+                    </a>
+                    <a
+                      href="./info/info.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      Información
+                    </a>
+                    <a
+                      href="./j_javascript/JavaScript.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      JS
+                    </a>
+                  </div>
+                  <div class="py-6">
+                    <a
+                      href="./login/login.html"
+                      class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      Inicia Sesión
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </el-dialog-panel>
+          </div>
+        </dialog>
+      </el-dialog>
+    </header>
+
+    <!-- CONTENIDO -->
+    <div
+      class="bg-black/70 py-20 px-6 lg:px-20 relative isolate px-6 pt-32 lg:px-8"
+    >
+      <div class="mx-auto max-w-2xl text-center">
+        <h1 class="text-5xl font-bold sm:text-7xl">PixelForge Studios</h1>
+        <p class="mt-6 text-lg text-gray-200">
+          "Forjando mundos, un pixel a la vez."
+        </p>
+        <div class="mt-10 flex justify-center gap-x-6">
+          <a
+            href="./nosotros/nosotros.html"
+            class="rounded-md bg-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-indigo-400"
+          >
+            Conocenos
+          </a>
+          <a href="./info/info.html" class="text-sm font-semibold text-white">
+            Más Información →</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- SOBRE MI -->
+    <section id="sobre-mi" class="bg-black/70 py-20 px-6 lg:px-20 mt-1">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-6">¿Quienes somos?</h3>
+        <p class="text-gray-300 leading-relaxed text-lg">
+          Somos una empresa llamada PixelForge Studios, dedicada al desarrollo
+          de videojuegos innovadores y emocionantes...
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-black/70 py-20 px-6 lg:px-20 mt-1">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-6">Misión</h3>
+        <p class="text-gray-300 leading-relaxed text-lg">
+          Nuestra misión en PixelForge Studios es crear videojuegos innovadores
+          y emocionantes que inspiren y entretengan...
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-black/70 py-20 px-6 lg:px-20 mt-1">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-6">Visión</h3>
+        <p class="text-gray-300 leading-relaxed text-lg">
+          Nuestra visión en PixelForge Studios es convertirnos en un referente
+          global en la industria del desarrollo...
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section
+      id="contacto"
+      class="bg-black/70 py-20 px-6 lg:px-20 border-t border-gray-700"
+    >
+      <div class="max-w-5xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-6">Contacto</h3>
+        <p class="text-gray-300 mb-8">
+          Si deseas ponerte en contacto con nosotros, aquí tienes nuestros
+          datos:
+        </p>
+        <div class="grid gap-6 sm:grid-cols-3">
+          <div
+            class="p-6 rounded-xl bg-gray-800/80 shadow hover:shadow-lg transition"
+          >
+            <h4 class="text-xl font-semibold mb-2">📧 Email</h4>
+            <p class="text-gray-400">contactopixelforgestudios@gmail.com</p>
+          </div>
+          <div
+            class="p-6 rounded-xl bg-gray-800/80 shadow hover:shadow-lg transition"
+          >
+            <h4 class="text-xl font-semibold mb-2">📱 Teléfono</h4>
+            <p class="text-gray-400">+51 999 999 999</p>
+          </div>
+          <div
+            class="p-6 rounded-xl bg-gray-800/80 shadow hover:shadow-lg transition"
+          >
+            <h4 class="text-xl font-semibold mb-2">🟠 Redes Sociales</h4>
+            <p class="text-gray-400">▶️ Youtube: PixelForge Studios</p>
+            <p class="text-gray-400">🐦 Twitter: @pixelforge</p>
+            <p class="text-gray-400">📸 Instagram: @pixelforge</p>
+          </div>
+          <div
+            class="p-6 rounded-xl bg-gray-800/80 shadow hover:shadow-lg transition sm:col-span-3"
+          >
+            <h4 class="text-xl font-semibold mb-2">📍 Ubicación</h4>
+            <p class="text-gray-400">Cañete, Lima, Perú</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-gray-300 py-6 mt-10">
+      <div class="container mx-auto text-center">
+        <p class="mb-4">
+          "Esta empresa es ficticia, creada solo para demostración..."
+        </p>
+        <div class="flex justify-center space-x-4 text-2xl">
+          <a href="#"
+            ><span title="Facebook" class="text-sm">📘Facebook</span></a
+          >
+          <a href="#"
+            ><span title="Instagram" class="text-sm">📸 Instagram</span></a
+          >
+          <a href="#"><span title="Twitter" class="text-sm">🐦Twitter</span></a>
+          <a href="#"
+            ><span title="YouTube" class="text-sm">▶️ Youtube</span></a
+          >
+        </div>
+        <p class="mt-4 text-sm">
+          &copy; 2025 PixelForge Studios. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
