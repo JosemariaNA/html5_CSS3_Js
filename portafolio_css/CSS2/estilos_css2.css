@@ -1,0 +1,194 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  text-align: center;
+  background-color: rgb(145, 145, 145);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ================= GLITCH ================== */
+.glitch {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-family: 'Righteous', serif;
+  font-size: 3em;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  clip: rect(0, 900px, 0, 0);
+  animation: glitchTop 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 #00fff9;
+  clip: rect(0, 900px, 0, 0);
+  animation: glitchBottom 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitchTop {
+  0% { clip: rect(0, 900px, 20px, 0); transform: translate(-2px, -2px);}
+  25% { clip: rect(10px, 900px, 40px, 0); transform: translate(2px, 2px);}
+  50% { clip: rect(5px, 900px, 25px, 0); transform: translate(-2px, 0);}
+  75% { clip: rect(15px, 900px, 35px, 0); transform: translate(2px, -2px);}
+  100% { clip: rect(0, 900px, 20px, 0); transform: translate(0);}
+}
+
+@keyframes glitchBottom {
+  0% { clip: rect(40px, 900px, 60px, 0); transform: translate(2px, 2px);}
+  25% { clip: rect(50px, 900px, 70px, 0); transform: translate(-2px, -2px);}
+  50% { clip: rect(45px, 900px, 65px, 0); transform: translate(2px, 0);}
+  75% { clip: rect(55px, 900px, 75px, 0); transform: translate(-2px, 2px);}
+  100% { clip: rect(40px, 900px, 60px, 0); transform: translate(0);}
+}
+
+/* ================= HEADER ================= */
+header {
+  background-color: rgba(29, 29, 29, 0.952);
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border: 4px double rgba(17, 17, 17, 0.644);
+  background-color: rgba(17, 17, 17, 0.644); 
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+li {
+  border: 4px double rgba(17, 17, 17, 0.644);
+  padding: 15px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#bc1a78;
+  text-decoration: underline;
+}
+
+/* ================= SUBTITULO ================= */
+.subtitulo {
+  font-size: 2em;
+  color: rgb(186, 100, 223);
+  padding: 10px;
+  text-align: left;
+}
+
+.subtitulo_footer {
+  font-size: 2.5em;
+  color: rgb(186, 100, 223);
+  padding: 10px;
+  text-align: center;
+}
+
+/* ================= SECCIONES ================= */
+.secciones {
+  max-width: 800px;
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.article {
+  margin-bottom: 20px;
+}
+
+.contacto_correo {
+  max-width: 300px;
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background-color: rgba(29, 29, 29, 0.952);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 4px double rgba(17, 17, 17, 0.644);
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* CELULAR */
+@media (max-width: 480px) {
+  .glitch { font-size: 2em; padding: 10px; }
+  .subtitulo { font-size: 1.8em; text-align: center; }
+  .subtitulo_footer { font-size: 1.8em; }
+  .secciones { padding: 15px; margin: 10px; }
+  .contacto_correo { max-width: 90%; }
+  footer { font-size: 0.8em; padding: 8px; }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  li {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/* TABLETAS */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .glitch { font-size: 3em; }
+  .subtitulo { font-size: 2em; }
+  .subtitulo_footer { font-size: 2em; }
+  .secciones { max-width: 90%; padding: 20px; }
+  .contacto_correo { max-width: 40%; }
+
+  nav ul { flex-wrap: wrap; gap: 15px; }
+}
+
+/* ESCRITORIO */
+@media (min-width: 1025px) {
+  .glitch { font-size: 4em; }
+  .secciones { max-width: 800px; }
+}

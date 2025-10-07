@@ -1,0 +1,282 @@
+body { font: 400 1em/1.5 "Neuton"; background: #090d00; color: rgba(255,255,255,.25); text-align: center; margin: 0 }
+
+.titulo {
+	text-transform: uppercase;
+	letter-spacing: .5em;
+	display: inline-block;
+	border: 4px double rgba(255,255,255,.25);
+	border-width: 4px 0;
+	padding: 1.5em 0em;
+	top: 18%;
+	left: 50%;
+	width: 40em;
+	margin: 0 0 0 0;
+  
+  span {
+
+  	font: 700 4em/1 "Oswald", sans-serif;
+  	letter-spacing: 0;
+  	padding: .25em 0 .325em;
+	  display: block;
+	  margin: 0 auto;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+/* Clip Background Image */
+
+	  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+
+/* Animate Background Image */
+
+	  -webkit-text-fill-color: transparent;
+	  -webkit-animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+
+	  -webkit-transform: translate3d(0,0,0);
+	  -webkit-backface-visibility: hidden;
+
+  }
+}
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+
+nav ul{
+      list-style: none;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+}
+
+nav a:hover{
+      color:#1abc9c;
+}
+
+li{
+    border: 4px double rgba(255,255,255,.25);
+    border-width: 4px 0;
+    padding: 20px;
+    flex: 1;               /* Todos los li toman igual espacio */
+    max-width: 200px;      /* Opcional: limita ancho máximo */
+    text-align: center;    /* Centra el texto dentro del li */
+    box-sizing: border-box;
+}
+
+a{
+      color: #fff;
+}
+
+a:hover{
+      text-decoration: underline;
+}
+
+.secciones{
+    max-width: 800px;
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0,1);
+    text-align: left;
+  }
+
+.subtitulo{
+    font-size: 2em;
+    color: black;
+    padding: 5px;
+}
+
+.texto{
+    color: black;
+}
+
+footer{
+    text-align: center;
+    padding: 15px;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin-top: 40px;
+    text-shadow:.03em .03em 0 rgb(109, 109, 109);
+}
+
+.c_info{
+    color: black;
+    text-align: left;
+    padding-left: 42px;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.contacto_correo{
+    padding: 10px;
+    max-width: 300px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* MOVIL */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  .titulo {
+    width: 90%;
+    top: 10%;
+    padding: 1em 0;
+  }
+
+  .titulo span {
+    font-size: 2.5em;
+    padding: 0.2em 0 0.25em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  li {
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    border-width: 2px 0;
+  }
+
+  .secciones {
+    width: 90%;
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  .subtitulo {
+    font-size: 1.5em;
+  }
+
+  .c_info {
+    font-size: 18px;
+    padding-left: 15px;
+  }
+
+  .contacto_correo {
+    max-width: 90%;
+    padding: 10px;
+  }
+}
+
+/* TABLETA */
+@media (min-width: 481px) and (max-width: 1023px) {
+  body {
+    font-size: 1em;
+  }
+
+  .titulo {
+    width: 70%;
+    top: 15%;
+    padding: 1.2em 0;
+  }
+
+  .titulo span {
+    font-size: 3.5em;
+  }
+
+  nav ul {
+    flex-direction: row;     /* fila por defecto */
+    gap: 15px;
+    justify-content: center; /* centra la fila */
+    flex-wrap: wrap;         /* si no cabe, pasa a columna automáticamente */
+    align-items: center;     /* centra los li verticalmente */
+  }
+
+  li {
+    flex: 1 1 150px;   /* ancho base 150px, flexible */
+    max-width: 180px;  /* opcional: no se estiren demasiado */
+    padding: 15px;
+    text-align: center;
+  }
+
+  .secciones {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .subtitulo {
+    font-size: 1.8em;
+  }
+
+  .c_info {
+    font-size: 20px;
+    padding-left: 25px;
+  }
+
+  .contacto_correo {
+    max-width: 80%;
+    padding: 12px;
+  }
+}
+
+/* Escritorios */
+@media (min-width: 1024px) {
+  body {
+    font-size: 1em;
+  }
+
+  .titulo {
+    width: 40em;
+    top: 18%;
+    padding: 1.5em 0;
+  }
+
+  .titulo span {
+    font-size: 4em;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  li {
+    flex: 1;
+    max-width: 200px;
+    padding: 20px;
+  }
+
+  .secciones {
+    width: 800px;
+    padding: 20px;
+  }
+
+  .subtitulo {
+    font-size: 2em;
+  }
+
+  .c_info {
+    font-size: 20px;
+    padding-left: 42px;
+  }
+
+  .contacto_correo {
+    max-width: 300px;
+    padding: 15px;
+  }
+}
